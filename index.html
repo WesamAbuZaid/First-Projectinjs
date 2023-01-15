@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- style  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <h2 class="text-center text-uppercase text-bg-dark py-2">crud system</h2>
+        <div class="container ">
+            <div class="row mt-4">
+                <div class="col-md-5  mb-3">
+                    <form action="">
+                        <div class="mb-3 position-relative">
+                            <label for="" class="form-label text-capitalize">name</label>
+                            <input type="text" class="form-control input-filed" id="name" placeholder="enter course name" required>
+                            <div class="invalid-feedback">
+                                Please add name at least 3 char.
+                            </div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label for="" class="form-label text-capitalize">price</label>
+                            <input type="text" class="form-control input-filed" id="price" placeholder="enter course price"required>
+                            <div class="invalid-feedback ">
+                                price must be number.
+                            </div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label for="" class="form-label text-capitalize">capacity</label>
+                            <input type="text" class="form-control input-filed" id="qty" placeholder="enter course capacity"required>
+                            <div class="invalid-feedback">
+                                capacity must be number.
+                            </div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                            <textarea class="form-control input-filed" id="desc"
+                                placeholder="Enter course description" rows="3"required></textarea>
+                                <div class="invalid-feedback">
+                                    Please add description at least 10 chars.
+                                </div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label for="cat" class="form-label">Category</label>
+                            <select class="form-select" id="cat" aria-label="Default select example"required>
+                                <option selected hidden value="">Open this select menu</option>
+                                <option value="cat1">cat1</option>
+                                <option value="cat2">cat2</option>
+                                <option value="cat3">cat3</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid category.
+                            </div>
+                        </div>
+                        <div class="btns">
+
+                            <button type="submit" id="add-btn" class="btn btn-primary disabled">add</button>
+                            <button type="submit" id="update-btn" class="btn btn-primary">update</button>  
+                            <button type="button" id="clear-btn" class="btn btn-dark">clear</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 offset-1 mb-3">
+                    <h3 class="text-primary">Search for course :</h3>
+                    <div class="input-group flex-nowrap my-3">
+                        <input type="text" id="keyword" class="form-control" placeholder="Start Typing to search...">
+                        <span class="input-group-text bg-transparent" id=""><i class="fa-solid fa-search"></i></span>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <h3 class="text-capitalize text-decoration-underline text-primary"> courses data</h3>
+                        <button id="delete" class="btn btn-danger btn-sm">deleteAll <i class="fa-solid fa-trash"></i></button>
+                    </div>
+
+                    <table class="table table-striped mt-3">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">category</th>
+                                <th scope="col">desc</th>
+                                <th scope="col">price</th>
+                                <th scope="col">capacity</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="table">
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- sweetalert -->
+    <!-- <script src="assets/external/sweetalert2@11.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- main  -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
